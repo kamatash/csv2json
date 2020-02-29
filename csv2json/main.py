@@ -2,6 +2,9 @@ import json
 
 class Header:
     def __init__(self, lines):
+        if not hasattr(lines, '__iter__'):
+            self._header = []
+            return
         self._header = [line.strip() for line in lines]
 
 
