@@ -33,7 +33,8 @@ output.json
 
 ## Usage
 ```
-docker run -v [host directory]:[container directory] python main.py
+docker build -t kamatash/csv2json .
+docker run -v $PWD:/usr/src/app -w /usr/src/app kamatash/csv2json python csv2json/main.py
 ```
 
 ## Development
