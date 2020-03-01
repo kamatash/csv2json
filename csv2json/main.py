@@ -11,7 +11,13 @@ class Header:
 class Body:
     def __init__(self, lines, header):
         self._body = []
+
+        if len(header) == 0:
+            return
+
         for line in lines:
+            if len(line.strip().split(',')) != len(header):
+                continue
             csv_dict = {}
             for index, row in enumerate(line.strip().split(',')):
                 csv_dict[header[index]] = row
