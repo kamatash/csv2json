@@ -1,4 +1,5 @@
 import json
+import sys
 
 class Header:
     def __init__(self, lines):
@@ -33,11 +34,9 @@ def main():
     with open('header.txt', 'r') as f:
         header = Header(f.readlines())
 
-    with open('input.csv', 'r') as f:
-        body = Body(f.readlines(), header._header)
+    body = Body(sys.stdin, header._header)
 
-    with open('output.json', 'w') as fw:
-        fw.write(body.to_json())
+    print(body.to_json())
 
 if __name__ == "__main__":
     main()
