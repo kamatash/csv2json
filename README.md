@@ -32,14 +32,25 @@ output.json
 
 
 ## Usage
+* convert
 ```
-docker build -t kamatash/csv2json .
-docker run -v $PWD:/usr/src/app -w /usr/src/app kamatash/csv2json python csv2json/main.py
+python csv2json/main.py < [input file]
+```
+
+* build container
+```
+docker build -t kamatash/csv2json:[version] .
+```
+
+* convert on docker
+```
+docker run -v $PWD:/usr/src/app -w /usr/src/app kamatash/csv2json:[version] python csv2json/main.py < [input file]
 ```
 
 ## Development
 ### Dependencies
 * Docker
+* codecov
 
 ### Testing
 ```
