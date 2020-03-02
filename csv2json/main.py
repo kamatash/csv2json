@@ -24,6 +24,8 @@ class Body:
             self._body.append(csv_dict)
 
     def to_json(self):
+        if len(self._body) == 0:
+            return ''
         return json.dumps(self._body)
 
 

@@ -38,3 +38,21 @@ def test_body_success_line_header_not_compatible():
     assert len(body._body) == 1
     assert body._body[0]['column1'] == 'row2'
     assert body._body[0]['column2'] == '2'
+
+
+def test_body_success_to_json_header_empty():
+    lines = ['row1,1', 'row2,2']
+    header = []
+    body = main.Body(lines, header)
+    json_str = body.to_json()
+
+    assert json_str is ''
+
+
+def test_body_success_to_json():
+    lines = ['row1,1', 'row2,2']
+    header = ['column1', 'column2']
+    body = main.Body(lines, header)
+    json_str = body.to_json()
+
+    assert type(json_str) == str
