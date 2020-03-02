@@ -1,4 +1,4 @@
-# csv2json
+# csv2json [![codecov](https://codecov.io/gh/kamatash/csv2json/branch/master/graph/badge.svg)](https://codecov.io/gh/kamatash/csv2json)
 ## Overview
 * CSV file convert to JSON file.
 * Convert one line of CSV to one object of JSON.
