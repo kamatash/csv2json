@@ -42,3 +42,11 @@ docker run -v $PWD:/usr/src/app -w /usr/src/app kamatash/csv2json python csv2jso
 * Docker
 
 ### Testing
+```
+docker run -v $PWD:/usr/src/app -w /usr/src/app kamatash/csv2json pytest --cov=./ tests
+```
+
+### Report coverage
+```
+docker run -v $PWD:/usr/src/app -w /usr/src/app kamatash/csv2json codecov --token=[CODECOV_TOKEN]
+```
