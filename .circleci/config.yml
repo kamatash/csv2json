@@ -11,3 +11,5 @@ jobs:
             . venv/bin/activate
             pip install pytest pytest-cov
             pytest tests --cov=csv2json --junitxml=test-reports/junit.xml
+      - store-test-results:
+          path: test-reports
