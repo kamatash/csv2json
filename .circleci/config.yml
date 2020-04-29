@@ -10,7 +10,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install pytest pytest-cov
-            pytest tests --cov=csv2json --junitxml=test-reports/junit.xml
+            pytest tests --cov=csv2json --junitxml=test-reports/junit.xml --cov-report=html:test-reports
       - store-test-results:
           path: test-reports
       - store_artifacts:
