@@ -13,3 +13,6 @@ jobs:
             pytest tests --cov=csv2json --junitxml=test-reports/junit.xml
       - store-test-results:
           path: test-reports
+      - store_artifacts:
+          path: test-reports
+  
