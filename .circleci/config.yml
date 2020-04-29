@@ -3,5 +3,5 @@ jobs:
   build:
     docker:
       - image: circleci/python:3
-  steps:
-    - checkout
+    steps:
+      - checkout
